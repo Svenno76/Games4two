@@ -36,7 +36,7 @@ def save_progress(name, difficulty):
 
 def generate_question(difficulty):
     """Generate a math question based on difficulty level"""
-    max_num = 10 + (difficulty * 5)
+    max_num = 10 + int(difficulty * 5)
     
     # Choose question type randomly
     question_type = random.choice(['a+x=b', 'a+b=x', 'x-a=b', 'a-x=b'])
@@ -60,7 +60,7 @@ def generate_question(difficulty):
         question = f"? - {a} = {b}"
         answer = x
     else:  # 'a-x=b'
-        a = random.randint(10, max_num + 10)
+        a = random.randint(max(10, max_num), max_num + 10)
         b = random.randint(1, a - 1)  # Ensure positive result
         x = a - b
         question = f"{a} - ? = {b}"
