@@ -164,16 +164,29 @@ elif st.session_state.game_started and not st.session_state.game_finished:
     
     st.divider()
     
+    # CSS für quadratische Karten
+    st.markdown("""
+    <style>
+    .stButton > button {
+        height: 80px;
+        font-size: 40px;
+        padding: 0;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
     # Berechne Grid-Layout basierend auf Anzahl der Karten
     num_cards = len(st.session_state.cards)
     if num_cards <= 12:
         cols_per_row = 4
     elif num_cards <= 24:
         cols_per_row = 6
+    elif num_cards <= 36:
+        cols_per_row = 6
     else:
         cols_per_row = 8
     
-    # Zeige die Karten
+    # Zeige die Karten in mehreren Reihen
     for row_start in range(0, num_cards, cols_per_row):
         cols = st.columns(cols_per_row)
         for i, col in enumerate(cols):
