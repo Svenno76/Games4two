@@ -9,7 +9,10 @@ st.set_page_config(
     layout="centered"
 )
 
-# Rennwagen-Bilder für das Memory-Spiel (Unsplash)
+# Rennwagen-Bilder für das Memory-Spiel
+# All images are sourced from Unsplash (https://unsplash.com)
+# Photos by talented photographers on Unsplash - Thank you!
+# License: Unsplash License (https://unsplash.com/license)
 RACING_CAR_IMAGES = [
     "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=300&fit=crop",  # Red Formula 1
     "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=300&fit=crop",  # Blue sports car
@@ -305,4 +308,4 @@ elif st.session_state.game_finished:
 
 # Footer
 st.divider()
-st.caption("Built with Streamlit 🚀")
+st.caption("Built with Streamlit 🚀 | Racing car photos by talented photographers on [Unsplash](https://unsplash.com)")
