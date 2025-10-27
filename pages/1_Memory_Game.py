@@ -164,13 +164,16 @@ elif st.session_state.game_started and not st.session_state.game_finished:
     
     st.divider()
     
-    # CSS für quadratische Karten
+    # CSS für große quadratische Karten
     st.markdown("""
     <style>
     .stButton > button {
-        height: 80px;
-        font-size: 40px;
+        height: 120px;
+        font-size: 70px;
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     </style>
     """, unsafe_allow_html=True)
